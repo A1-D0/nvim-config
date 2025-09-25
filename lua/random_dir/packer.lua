@@ -35,24 +35,19 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
 
-    use 'VonHeikemen/lsp-zero.nvim'
+    -- LSP Plugins
+    -- use 'VonHeikemen/lsp-zero.nvim'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
+    use "hrsh7th/nvim-cmp"
+    use "hrsh7th/cmp-nvim-lsp"
 
     -- Autocompletion
-    use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'saadparwaiz1/cmp_luasnip'
-    use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lua'
 
     -- Snippets
