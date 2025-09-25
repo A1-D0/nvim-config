@@ -85,5 +85,13 @@ return require('packer').startup(function(use)
         end,
     })
 
+    -- Comment ability
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
 end)
 
