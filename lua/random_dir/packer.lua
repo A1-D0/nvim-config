@@ -85,7 +85,20 @@ return require('packer').startup(function(use)
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
-        end
+       end
+    }
+
+    -- colors for csv files
+    use {
+        "hat0uma/csvview.nvim",
+        config = function()
+            require("csvview").setup({
+                parser = { comments = { "#", "//" } },
+                view = {
+                    display_mode = "border",  -- repo uses display_mode
+                },
+            })
+        end,
     }
 
 end)
