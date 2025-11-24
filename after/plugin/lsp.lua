@@ -23,7 +23,32 @@ local lspconfig = require("lspconfig")
 
 -- Python
 lspconfig.pyright.setup{
-  capabilities = capabilities,
+    capabilities = capabilities,
+    settings = {
+        pyright = {
+            disableOrganizeImports = false,
+        },
+        python = {
+            analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = "workspace",
+
+                -- Prevent Pyright from indexing huge or useless dirs
+                exclude = {
+                    "**/__pycache__",
+                    "**/.git",
+                    "**/.mypy_cache",
+                    "**/.pytest_cache",
+                    "**/node_modules",
+                    "venv",
+                    ".venv",
+                    "dist",
+                    "build"
+                }
+            }
+        }
+    }
 }
 
 -- C/C++
