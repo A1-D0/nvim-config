@@ -40,7 +40,7 @@ return require('packer').startup(function(use)
     -- use 'VonHeikemen/lsp-zero.nvim'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
+    -- use 'williamboman/mason-lspconfig.nvim'
     use "hrsh7th/nvim-cmp"
     use "hrsh7th/cmp-nvim-lsp"
 

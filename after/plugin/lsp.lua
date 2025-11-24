@@ -32,7 +32,7 @@ lspconfig.pyright.setup{
             analysis = {
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
-                diagnosticMode = "workspace",
+                diagnosticMode = "openFilesOnly",
 
                 -- Prevent Pyright from indexing huge or useless dirs
                 exclude = {
@@ -62,10 +62,10 @@ lspconfig.jdtls.setup{
   capabilities = capabilities,
 }
 
--- JavaScript/TypeScript (see new server name)
-lspconfig.ts_ls.setup{   -- CHANGED from tsserver to ts_ls
-  capabilities = capabilities,
-}
+-- -- JavaScript/TypeScript (see new server name)
+-- lspconfig.ts_ls.setup{   -- CHANGED from tsserver to ts_ls
+--   capabilities = capabilities,
+-- }
 
 -- SQL (using sqlls, adjust if you use sqls)
 lspconfig.sqlls.setup{

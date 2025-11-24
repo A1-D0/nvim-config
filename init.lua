@@ -1,2 +1,2 @@
 require("random_dir")
-require("mason").setup()
+-- require("mason").setup()
