@@ -101,5 +101,11 @@ return require('packer').startup(function(use)
         end,
     }
 
+    -- peak at definitions
+    use({
+        "dnlhc/glance.nvim",
+        requires = { "nvim-tree/nvim-web-devicons" }, -- has nice icons
+    })
+
 end)
 
